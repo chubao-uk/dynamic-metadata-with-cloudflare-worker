@@ -1,6 +1,5 @@
 export const config = {
-  //domainSource: "https://2fa15b2a-5384-4834-9f6b-b074287ab397.weweb-preview.io", // Your WeWeb app preview link
-  domainSource: "https://www.whcmed.com", // Your WeWeb app preview link
+  domainSource: "https://2fa15b2a-5384-4834-9f6b-b074287ab397.weweb-preview.io", // Your WeWeb app preview link
   patterns: [
       {
           pattern: "/store/product/[^/]+",
