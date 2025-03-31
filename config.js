@@ -3,7 +3,7 @@ export const config = {
   patterns: [
       {
           pattern: "/store/product/[^/]+",
-          metaDataEndpoint: "https://xp7p-n0ok-fjrr.e2.xano.io/api:WC7yTG1w/get_store_product_metadata/{url}/"
+          metaDataEndpoint: "https://xp7p-n0ok-fjrr.e2.xano.io/api:WC7yTG1w/get_store_product_metadata/{url}"
       },
       // Add more patterns and their metadata endpoints as needed
   ]
