@@ -10,6 +10,18 @@ export default {
 
     // Parse the request URL
     const url = new URL(request.url);
+
+    if (url.pathname === '/serviceworker.js' ||
+        url.pathname.startsWith('/serviceworker.js?')) {
+      return new Response('', {
+        status: 410,                         // “Gone”
+        headers: {
+          // prevent any edge/browser from caching the empty response
+          'Cache-Control': 'no-store'
+        }
+      });
+    }
+	  
     const referer = request.headers.get('Referer')
 
     // Function to get the pattern configuration that matches the URL
