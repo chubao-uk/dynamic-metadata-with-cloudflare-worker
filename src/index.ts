@@ -21,6 +21,12 @@ export default {
         }
       });
     }
+
+  if (!getPatternConfig(url.pathname) && !isPageData(url.pathname)) {
+  // Fetch the original HTML and return it untouched
+	  const originURL = new URL(`${domainSource}${url.pathname}`);
+	  return fetch(originURL.toString(), request);
+	}
 	  
     const referer = request.headers.get('Referer')
 
